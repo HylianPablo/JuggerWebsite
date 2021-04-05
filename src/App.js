@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from "./logo.svg";
+import "./App.css";
+import NavbarJ from "./NavbarJ";
+import Home from "./Home"
+import AboutUs from "./AboutUs.js"
+import Ranking from "./Ranking.js"
+import "bootstrap/dist/css/bootstrap.min.css";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 
 function App() {
+  const pageName = "Jugger Community";
+
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <h1>{pageName}</h1>
+        <NavbarJ/>
+        <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="/about">
+          <AboutUs/>
+        </Route>
+        <Route path="/ranking">
+          <Ranking/>
+        </Route>
+        </Switch>
+      </div>
     </div>
+    </Router>
   );
 }
 
