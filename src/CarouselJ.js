@@ -36,7 +36,7 @@ const CarouselJ = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Ven a Juggerl</h3>
+          <h3>Ven a Jugger</h3>
           <p>
             Texto de ejemplo
           </p>
