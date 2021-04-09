@@ -1,11 +1,13 @@
 //import logo from "./logo.svg";
 import "./App.css";
 import NavbarJ from "./NavbarJ";
-import Home from "./Home"
-import AboutUs from "./AboutUs.js"
-import Ranking from "./Ranking.js"
+import Home from "./Home";
+import AboutUs from "./AboutUs.js";
+import Ranking from "./Ranking.js";
+import Registration from "./Registration.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import SignIn from "./SignIn";
 
 
 function App() {
@@ -26,6 +28,12 @@ function App() {
         </Route>
         <Route path="/ranking">
           <Ranking/>
+        </Route>
+        <Route path="/signUp">
+          <Registration/>
+        </Route>
+        <Route path="/signIn">
+          <SignIn/>
         </Route>
         </Switch>
       </div>

@@ -43,3 +43,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* This is not responsive, should be changed later */
+.registrationForm {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.leftRegistration {
+  position: absolute;
+  left: 50px;
+  padding: 0px;
+}
