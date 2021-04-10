@@ -5,6 +5,7 @@ import Home from "./Home";
 import AboutUs from "./AboutUs.js";
 import Ranking from "./Ranking.js";
 import Registration from "./Registration.js";
+import Footer from "./Footer.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignIn from "./SignIn";
@@ -37,6 +38,9 @@ function App() {
         </Route>
         </Switch>
       </div>
+      <footer className="footer">
+        <Footer/>
+      </footer>
     </div>
     </Router>
   );

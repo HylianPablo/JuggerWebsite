@@ -6,9 +6,6 @@ const Home = () => {
     <div className="main">
       <CarouselJ />
       <br></br>
-      <Card>
-        <Card.Body>El Jugger consiste en saber no elegir el Q-Tip como arma.</Card.Body>
-      </Card>
     </div>
   );
 };

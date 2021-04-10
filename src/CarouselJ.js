@@ -6,7 +6,7 @@ import carouselImage3 from "./assets/carousel3.jpg";
 
 const CarouselJ = () => {
   return (
-    <Carousel className="carousell">
+    <Carousel className="carousel">
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
