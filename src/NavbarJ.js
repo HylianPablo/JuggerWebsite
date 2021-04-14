@@ -1,6 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Button from "react-bootstrap/Button";
 
 const NavbarJ = () => {
   return (
@@ -24,9 +25,11 @@ const NavbarJ = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="about">Sobre nosotros</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
-            Redes sociales
+          <Nav.Link href="/signIn">
+            <Button variant="warning">Inicia Sesión</Button>{' '}
+            </Nav.Link>
+          <Nav.Link eventKey={2} href="/signUp">
+          <Button variant="primary">Regístrate</Button>{' '}
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
