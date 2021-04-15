@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav"
 const Footer = () => {
   return (
+    <div className="main-footer">
     <Card className="text-center" bg={"dark"} text={"light"}>
       <Card.Body>
         <Card.Title><Nav.Link href="/about">Sobre nosotros</Nav.Link></Card.Title>
@@ -25,6 +26,7 @@ const Footer = () => {
         2021 - Jugger Community &copy;
       </Card.Footer>
     </Card>
+    </div>
   );
 };
 export default Footer;
