@@ -95,3 +95,12 @@
   margin-right: auto;
   
 }
+
+.logoT {
+  width: 70%;
+}
+
+.logoList {
+  height: 37.5rem;
+  overflow-y: auto;
+}

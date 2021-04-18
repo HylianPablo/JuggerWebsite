@@ -10,6 +10,7 @@ import Content from "./Content.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignIn from "./SignIn";
+import Tournaments from "./Tournaments.js";
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/about">
           <AboutUs/>
+        </Route>
+        <Route path="/torneos">
+          <Tournaments/>
         </Route>
         <Route path="/ranking">
           <Ranking/>
