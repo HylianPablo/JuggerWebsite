@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-import React, { useEffect, useState } from "react";
 import carouselImage1 from "./assets/Merchandising.jpg";
 
 const CarouseWeapons = () => {

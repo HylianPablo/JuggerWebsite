@@ -1,8 +1,7 @@
-const Weapons = () => {
+const JuggerKits = () => {
     return (  
-        <p>Aqui apareceran los tipos de equipaciones sudadera camiseta etc
-        </p>
+        <p>Aqui apareceran los tipos de equipaciones sudadera camiseta etc</p>
     );
 }
  
-export default Weapons;
+export default JuggerKits;

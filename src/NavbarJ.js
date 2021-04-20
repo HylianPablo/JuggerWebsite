@@ -14,9 +14,7 @@ const NavbarJ = () => {
           <Nav.Link href="/ranking">Ranking</Nav.Link>
           <NavDropdown title="Tienda" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/Weapons">Armas</NavDropdown.Item>
-            <NavDropdown.Item href="/kits">
-              Equipaciones
-            </NavDropdown.Item>
+            <NavDropdown.Item href="/kits">Equipaciones</NavDropdown.Item>
             <NavDropdown.Item href="/Merchandising">Merchandising</NavDropdown.Item>
             
           </NavDropdown>
