@@ -10,6 +10,7 @@ const NavbarJ = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
+          <Nav.Link href="/comunidad">Comunidad</Nav.Link>
           <Nav.Link href="/torneos">Torneos</Nav.Link>
           <Nav.Link href="/ranking">Ranking</Nav.Link>
           <NavDropdown title="Tienda" id="collasible-nav-dropdown">

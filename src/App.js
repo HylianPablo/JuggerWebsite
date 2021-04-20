@@ -1,7 +1,8 @@
-//import logo from "./logo.svg";
+ //import logo from "./logo.svg";
 import "./App.css";
 import NavbarJ from "./NavbarJ";
 import Home from "./Home";
+import Comunidad from "./Comunidad.js";
 import AboutUs from "./AboutUs.js";
 import Ranking from "./Ranking.js";
 import Registration from "./Registration.js";
@@ -29,6 +30,9 @@ function App() {
         <Switch>
         <Route exact path="/">
           <Home/>
+        </Route>
+        <Route path="/comunidad">
+          <Comunidad/>
         </Route>
         <Route path="/about">
           <AboutUs/>
