@@ -1,6 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Button from "react-bootstrap/Button";
 
 const NavbarJ = () => {
   return (
@@ -17,16 +18,26 @@ const NavbarJ = () => {
               Equipaciones
             </NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Merchandising</NavDropdown.Item>
+            
+          </NavDropdown>
+          <NavDropdown title="Contenidos" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Técnicas de Jugger</NavDropdown.Item>
+            <NavDropdown.Item href="/Yulia">Coaching de Yulia Barrera</NavDropdown.Item>
+          </NavDropdown>
+          <NavDropdown title="FEJ" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Bitácora</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Some link
+            <NavDropdown.Item href="https://fejugger.es/bitacora/tag/ranking/">
+              Ranking de FEJugger
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="about">Sobre nosotros</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
-            Redes sociales
+          <Nav.Link href="/signIn">
+            <Button variant="warning">Inicia Sesión</Button>{' '}
+            </Nav.Link>
+          <Nav.Link eventKey={2} href="/signUp">
+          <Button variant="primary">Regístrate</Button>{' '}
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
