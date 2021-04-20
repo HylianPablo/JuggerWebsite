@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 const SignIn = () => {
   return (
     <Form className="registrationForm">
-        <br></br>
+      <br></br>
       <Form.Group controlId="formBasicEmail">
         <Form.Control type="text" placeholder="Nombre de usuario" />
       </Form.Group>
