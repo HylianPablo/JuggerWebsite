@@ -7,9 +7,15 @@ import AboutUs from "./AboutUs.js";
 import Ranking from "./Ranking.js";
 import Registration from "./Registration.js";
 import Footer from "./Footer.js";
+import Content from "./Content.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignIn from "./SignIn";
+import Tournaments from "./Tournaments.js";
+import KitsShop from "./KitsShop";
+import WeaponShop from "./WeaponShop";
+import MerchandisingShop from "./MerchandisingShop";
+
 
 
 function App() {
@@ -17,7 +23,7 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
+    <div className="App page-container">
       <div className="content">
         <h1>{pageName}</h1>
         <NavbarJ/>
@@ -31,14 +37,29 @@ function App() {
         <Route path="/about">
           <AboutUs/>
         </Route>
+        <Route path="/torneos">
+          <Tournaments/>
+        </Route>
         <Route path="/ranking">
           <Ranking/>
+        </Route>
+        <Route path="/Yulia">
+          <Content/>
         </Route>
         <Route path="/signUp">
           <Registration/>
         </Route>
         <Route path="/signIn">
           <SignIn/>
+        </Route>
+        <Route path="/kits">
+            <KitsShop/>
+        </Route>
+        <Route path="/Weapons">
+            <WeaponShop/>
+        </Route>
+        <Route path="/Merchandising">
+          <MerchandisingShop/>
         </Route>
         </Switch>
       </div>

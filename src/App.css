@@ -57,7 +57,23 @@
 }
 
 .footer{
-  background-color: #282c34;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  height: 2.5rem; 
+}
+
+.page-container {
+  position: relative;
+  min-height: 80vh;
+}
+
+.main-footer {
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .card-img-top {
@@ -70,4 +86,21 @@
     width: 100%;
     height: 4vw;
     object-fit: cover;
+}
+
+.youtubeVideo {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.logoT {
+  width: 70%;
+}
+
+.logoList {
+  height: 37.5rem;
+  overflow-y: auto;
 }
