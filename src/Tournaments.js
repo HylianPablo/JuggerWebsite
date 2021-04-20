@@ -9,20 +9,31 @@ import spring from "./assets/spring.png";
 
 const Tournaments = () => {
   return (
-    <div className="registrationForm"> {/* CSS of this div should be changed in a future */}
-        <br></br>
+    <div className="registrationForm">
+      {" "}
+      {/* CSS of this div should be changed in a future */}
+      <br></br>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
           <Col sm={3} className="logoList">
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
-                <Nav.Link eventKey="first" > <img src={winter} className="logoT"></img></Nav.Link>
+                <Nav.Link eventKey="first">
+                  {" "}
+                  <img src={winter} className="logoT"></img>
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second"> <img src={summer} className="logoT"></img></Nav.Link>
+                <Nav.Link eventKey="second">
+                  {" "}
+                  <img src={summer} className="logoT"></img>
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="third"> <img src={spring} className="logoT"></img></Nav.Link>
+                <Nav.Link eventKey="third">
+                  {" "}
+                  <img src={spring} className="logoT"></img>
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
