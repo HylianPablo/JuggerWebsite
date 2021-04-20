@@ -11,6 +11,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignIn from "./SignIn";
 import Tournaments from "./Tournaments.js";
+import KitsShop from "./KitsShop";
+import WeaponShop from "./WeaponShop";
+import MerchandisingShop from "./MerchandisingShop";
+
 
 
 function App() {
@@ -43,6 +47,15 @@ function App() {
         </Route>
         <Route path="/signIn">
           <SignIn/>
+        </Route>
+        <Route path="/kits">
+            <KitsShop/>
+        </Route>
+        <Route path="/Weapons">
+            <WeaponShop/>
+        </Route>
+        <Route path="/Merchandising">
+          <MerchandisingShop/>
         </Route>
         </Switch>
       </div>
