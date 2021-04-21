@@ -1,5 +1,5 @@
-import MasterRanking from "./MasterRanking";
-import NormalRanking from "./NormalRanking";
+import MasterRanking from "./MasterRanking.js";
+import NormalRanking from "./NormalRanking.js";
 
 const Ranking = () => {
 

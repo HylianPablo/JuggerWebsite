@@ -1,4 +1,4 @@
-import CarouselJ from "./CarouselJ";
+import CarouselJ from "./Utils/CarouselJ";
 
 const Home = () => {
   return (

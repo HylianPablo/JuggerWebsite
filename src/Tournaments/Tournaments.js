@@ -3,9 +3,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 
-import winter from "./assets/winter.png";
-import summer from "./assets/summer.png";
-import spring from "./assets/spring.png";
+import winter from "../assets/winter.png";
+import summer from "../assets/summer.png";
+import spring from "../assets/spring.png";
 
 const Tournaments = () => {
   return (

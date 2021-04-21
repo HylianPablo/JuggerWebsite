@@ -1,8 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
 import React, { useEffect, useState } from "react";
-import carouselImage1 from "./assets/BushidoShirt.jpg";
-import carouselImage2 from "./assets/Equipación_Legends_of_Today_Wikijugger.jpg";
-import carouselImage3 from "./assets/GuldenShirt.jpg";
+import carouselImage1 from "../assets/BushidoShirt.jpg";
+import carouselImage2 from "../assets/Equipación_Legends_of_Today_Wikijugger.jpg";
+import carouselImage3 from "../assets/GuldenShirt.jpg";
 
 const CarouseShopShirts= () => {
   return (

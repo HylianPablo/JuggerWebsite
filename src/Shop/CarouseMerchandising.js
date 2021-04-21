@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import carouselImage1 from "./assets/Merchandising.jpg";
+import carouselImage1 from "../assets/Merchandising.jpg";
 
 const CarouseWeapons = () => {
     return (

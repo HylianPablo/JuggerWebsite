@@ -14,9 +14,9 @@ const NavbarJ = () => {
           <Nav.Link href="/torneos">Torneos</Nav.Link>
           <Nav.Link href="/ranking">Ranking</Nav.Link>
           <NavDropdown title="Tienda" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/Weapons">Armas</NavDropdown.Item>
-            <NavDropdown.Item href="/kits">Equipaciones</NavDropdown.Item>
-            <NavDropdown.Item href="/Merchandising">Merchandising</NavDropdown.Item>
+            <NavDropdown.Item href="/tiendaArmas">Armas</NavDropdown.Item>
+            <NavDropdown.Item href="/tiendaKits">Equipaciones</NavDropdown.Item>
+            <NavDropdown.Item href="/tiendaMerchandising">Merchandising</NavDropdown.Item>
             
           </NavDropdown>
           <NavDropdown title="Contenidos" id="collasible-nav-dropdown">
@@ -32,10 +32,10 @@ const NavbarJ = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="/signIn">
+          <Nav.Link href="/iniciarSesion">
             <Button variant="warning">Inicia Sesión</Button>{' '}
             </Nav.Link>
-          <Nav.Link eventKey={2} href="/signUp">
+          <Nav.Link eventKey={2} href="/registro">
           <Button variant="primary">Regístrate</Button>{' '}
           </Nav.Link>
         </Nav>
