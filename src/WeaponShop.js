@@ -1,12 +1,13 @@
 import CarouseWeapons from "./CarouseWeapons";
-import JuggerKits from "./JuggerKits";
 import JuggerWeapons from "./JuggerWeapons";
+import Seeker from "./Seeker";
 
 
 const WeaponShop = () => {
   return (
     <div className="main">
-        <p> Aqui ira un buscador (aun no decidido) a la derecha que es lo tipico para buscar un tipo de arma vendedor etc</p>
+      
+        <Seeker></Seeker>
       <CarouseWeapons/>
       <br></br>
       <JuggerWeapons/>

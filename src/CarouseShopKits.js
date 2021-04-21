@@ -1,5 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-import React, { useEffect, useState } from "react";
 import carouselImage1 from "./assets/BushidoShirt.jpg";
 import carouselImage2 from "./assets/Equipación_Legends_of_Today_Wikijugger.jpg";
 import carouselImage3 from "./assets/GuldenShirt.jpg";
@@ -14,8 +13,7 @@ const CarouseShopShirts= () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Tendencias</h3>
-          <p>Equipacion Bushido</p>
+          <h3 style={{color:"black"}}>Tendencias</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
@@ -25,8 +23,7 @@ const CarouseShopShirts= () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Tendencias</h3>
-          <p>Equipacion Lot</p>
+          <h3 style={{color:"black"}}>Tendencias</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -36,10 +33,7 @@ const CarouseShopShirts= () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Tendencias</h3>
-          <p>
-           Equipacion Gulden
-          </p>
+          <h3 style={{color:"black"}}>Tendencias</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

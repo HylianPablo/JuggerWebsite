@@ -52,13 +52,13 @@ function App() {
         <Route path="/signIn">
           <SignIn/>
         </Route>
-        <Route path="/kits">
+        <Route path="/equipaciones">
             <KitsShop/>
         </Route>
-        <Route path="/Weapons">
+        <Route path="/armas">
             <WeaponShop/>
         </Route>
-        <Route path="/Merchandising">
+        <Route path="/merchandising">
           <MerchandisingShop/>
         </Route>
         </Switch>

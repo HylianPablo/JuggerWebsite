@@ -11,8 +11,7 @@ const CarouseWeapons = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>Tendencias</h3>
-              <p>Equipacion Bushido</p>
+              <h3 style={{color:"black"}}>Tendencias</h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

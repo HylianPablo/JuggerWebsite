@@ -44,6 +44,10 @@
   margin-right: auto;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
 /* This is not responsive, should be changed later */
 .registrationForm {
   margin-left: 50px;
@@ -104,3 +108,43 @@
   height: 37.5rem;
   overflow-y: auto;
 }
+
+
+.textField{
+  height: 32px;
+    width: 200px;
+    padding: 0 32px 0 16px;
+  
+  }
+    .textField:hover {
+      cursor: pointer;
+    }
+  
+    .btnBuscar{
+      height: 34px;
+      width: 32px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .barraBusqueda{
+  float: right;
+   padding: 20px;
+    }
+
+    .columna {
+      float: left;
+      width: 25%;
+      padding-right: 5px;
+    }
+    
+    .fila::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    img {
+      /* Para que sea responsiva */
+      width: 100%;
+    }
