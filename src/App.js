@@ -16,6 +16,7 @@ import Tournaments from "./Tournaments/Tournaments.js";
 import KitsShop from "./Shop/KitsShop";
 import WeaponShop from "./Shop/WeaponShop";
 import MerchandisingShop from "./Shop/MerchandisingShop";
+import TeamRegistration from "./Tournaments/TeamRegistration.js";
 
 
 
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/about">
           <AboutUs/>
+        </Route>
+        <Route path="/torneos/inscripcion">
+          <TeamRegistration/>
         </Route>
         <Route path="/torneos">
           <Tournaments/>
@@ -62,6 +66,7 @@ function App() {
         <Route path="/tiendaMerchandising">
           <MerchandisingShop/>
         </Route>
+        
         </Switch>
       </div>
       <footer className="footer">

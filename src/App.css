@@ -104,3 +104,7 @@
   height: 37.5rem;
   overflow-y: auto;
 }
+
+.leftLabel {
+  margin-left: 15px;
+}

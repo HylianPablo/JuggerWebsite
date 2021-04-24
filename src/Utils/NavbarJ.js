@@ -11,7 +11,10 @@ const NavbarJ = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/comunidad">Comunidad</Nav.Link>
-          <Nav.Link href="/torneos">Torneos</Nav.Link>
+          <NavDropdown title="Torneos" id="collasible-van-dropdown">
+            <NavDropdown.Item href="/torneos">Calendario de torneos</NavDropdown.Item>
+            <NavDropdown.Item href="/torneosAnteriores">Torneos anteriores</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link href="/ranking">Ranking</Nav.Link>
           <NavDropdown title="Tienda" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/tiendaArmas">Armas</NavDropdown.Item>
