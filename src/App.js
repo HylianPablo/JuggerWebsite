@@ -18,6 +18,7 @@ import WeaponShop from "./Shop/WeaponShop";
 import MerchandisingShop from "./Shop/MerchandisingShop";
 import TeamRegistration from "./Tournaments/TeamRegistration.js";
 import PastTournaments from "./Tournaments/PastTournaments";
+import PastTournamentsInfo from "./Tournaments/PastTournamentInfo";
 
 
 
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route path="/torneos/inscripcion">
           <TeamRegistration/>
+        </Route>
+        <Route path="/torneosAnteriores/descripcion">
+          <PastTournamentsInfo/>
         </Route>
         <Route path="/torneosAnteriores">
           <PastTournaments/>

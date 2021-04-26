@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
@@ -19,7 +21,7 @@ const PastTournamentsDesc = () => {
         <Col sm={3} className="logoGrid">
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="first">
+              <Nav.Link eventKey="first" href="torneosAnteriores/descripcion">
                 {" "}
                 <img src={winter} className="logoT"></img>
               </Nav.Link>
@@ -29,7 +31,7 @@ const PastTournamentsDesc = () => {
         <Col sm={3} className="logoGrid">
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="first">
+              <Nav.Link eventKey="first" href="torneosAnteriores/descripcion">
                 {" "}
                 <img src={summer} className="logoT"></img>
               </Nav.Link>
@@ -41,7 +43,7 @@ const PastTournamentsDesc = () => {
         <Col sm={3} className="logoGrid">
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="first">
+              <Nav.Link eventKey="first" href="torneosAnteriores/descripcion">
                 {" "}
                 <img src={spring} className="logoT"></img>
               </Nav.Link>
@@ -51,7 +53,7 @@ const PastTournamentsDesc = () => {
         <Col sm={3} className="logoGird">
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="first">
+              <Nav.Link eventKey="first" href="torneosAnteriores/descripcion">
                 {" "}
                 <img src={tie} className="logoT"></img>
               </Nav.Link>
