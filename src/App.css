@@ -50,6 +50,11 @@
   margin-right: 50px;
 }
 
+.gridPastTournaments {
+  position: relative;
+  left: 100px;
+}
+
 .leftRegistration {
   position: absolute;
   left: 50px;
@@ -103,4 +108,12 @@
 .logoList {
   height: 37.5rem;
   overflow-y: auto;
+}
+
+.logoGrid {
+  margin-bottom: 5rem;
+}
+
+.leftLabel {
+  margin-left: 15px;
 }
