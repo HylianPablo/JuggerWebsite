@@ -81,15 +81,15 @@
 }
 
 .card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }
 
 .card-txt-top {
-    width: 100%;
-    height: 4vw;
-    object-fit: cover;
+  width: 100%;
+  height: 4vw;
+  object-fit: cover;
 }
 
 .youtubeVideo {
@@ -112,39 +112,39 @@
 
 .textField{
   height: 32px;
-    width: 200px;
-    padding: 0 32px 0 16px;
+  width: 200px;
+  padding: 0 32px 0 16px;
   
   }
-    .textField:hover {
-      cursor: pointer;
-    }
+.textField:hover {
+  cursor: pointer;
+}
   
-    .btnBuscar{
-      height: 34px;
-      width: 32px;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
+.btnBuscar{
+  height: 34px;
+  width: 32px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
   
-    .barraBusqueda{
+.barraBusqueda{
   float: right;
-   padding: 20px;
-    }
+  padding: 20px;
+}
 
-    .columna {
-      float: left;
-      width: 25%;
-      padding-right: 5px;
-    }
+.columna {
+  float: left;
+  width: 25%;
+  padding-right: 5px;
+}
     
-    .fila::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    img {
+.fila::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+img {
       /* Para que sea responsiva */
-      width: 100%;
-    }
+  width: 100%;
+}

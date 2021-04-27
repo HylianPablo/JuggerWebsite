@@ -1,5 +1,5 @@
 import Image1 from "./assets/BushidoShirt.jpg";
-import Image2 from "./assets/Equipación_Legends_of_Today_Wikijugger.jpg";
+import Image2 from "./assets/LOTShirt.jpg";
 import Image3 from "./assets/GuldenShirt.jpg";
 import Image4 from "./assets/SkollShirt.jpg";
 
