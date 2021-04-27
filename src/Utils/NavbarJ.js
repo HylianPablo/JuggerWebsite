@@ -11,12 +11,17 @@ const NavbarJ = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/comunidad">Comunidad</Nav.Link>
-          <Nav.Link href="/torneos">Torneos</Nav.Link>
+          <NavDropdown title="Torneos" id="collasible-van-dropdown">
+            <NavDropdown.Item href="/torneos">Calendario de torneos</NavDropdown.Item>
+            <NavDropdown.Item href="/torneosAnteriores">Torneos anteriores</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link href="/ranking">Ranking</Nav.Link>
           <NavDropdown title="Tienda" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/armas">Armas</NavDropdown.Item>
-            <NavDropdown.Item href="/equipaciones">Equipaciones</NavDropdown.Item>
-            <NavDropdown.Item href="/merchandising">Merchandising</NavDropdown.Item>
+
+            <NavDropdown.Item href="/tiendaArmas">Armas</NavDropdown.Item>
+            <NavDropdown.Item href="/tiendaKits">Equipaciones</NavDropdown.Item>
+            <NavDropdown.Item href="/tiendaMerchandising">Merchandising</NavDropdown.Item>
+
             
           </NavDropdown>
           <NavDropdown title="Contenidos" id="collasible-nav-dropdown">
@@ -32,10 +37,10 @@ const NavbarJ = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="/signIn">
+          <Nav.Link href="/iniciarSesion">
             <Button variant="warning">Inicia Sesión</Button>{' '}
             </Nav.Link>
-          <Nav.Link eventKey={2} href="/signUp">
+          <Nav.Link eventKey={2} href="/registro">
           <Button variant="primary">Regístrate</Button>{' '}
           </Nav.Link>
         </Nav>

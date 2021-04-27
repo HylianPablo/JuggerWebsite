@@ -1,11 +1,13 @@
-import Image1 from "./assets/qtip1.jpg";
-import Image2 from "./assets/qtip2.jpg";
-import Image3 from "./assets/qtip3.jpg";
-import Image4 from "./assets/qtip4.jpg";
+import Image1 from "/src/assets/qtip1.jpg";
+import Image2 from "/src/assets/qtip2.jpg";
+import Image3 from "/src/assets/qtip3.jpg";
+import Image4 from "/src/assets/qtip4.jpg";
+import Image5 from "/src/assets/stab1.png";
 
-const JuggerMerchandising = () => {
-    return (  
-            <div><h1 style={{color:"black", lineHeight: "100px"}}>Camisetas</h1>
+
+const JuggerWeapons = () => {
+    return ( 
+        <div><h1 style={{color:"black", lineHeight: "100px"}}>Q-Tips</h1>
             <div className="fila">
                 <div className="columna">
                     <img src={Image1}></img>
@@ -20,19 +22,19 @@ const JuggerMerchandising = () => {
                     <img src={Image4}></img>
                 </div>
             </div>
-            <h1 style={{color:"black", lineHeight: "100px"}}>Pantalones (Ejemplo no tengo pantalones asi que son las mismas)</h1>
+            <h1 style={{color:"black", lineHeight: "100px"}}>Stabs</h1>
             <div className="fila">
                 <div className="columna">
-                    <img src={Image1}></img>
+                    <img src={Image5}></img>
                 </div>
                 <div className="columna">
-                    <img src={Image2}></img>
+                    <img src={Image5}></img>
                 </div>
                 <div className="columna">
-                    <img src={Image3}></img>
+                    <img src={Image5}></img>
                 </div>
                 <div className="columna">
-                    <img src={Image4}></img>
+                    <img src={Image5}></img>
                 </div>
             </div>
             </div>
@@ -40,4 +42,4 @@ const JuggerMerchandising = () => {
      );
 }
  
-export default JuggerMerchandising;
+export default JuggerWeapons;

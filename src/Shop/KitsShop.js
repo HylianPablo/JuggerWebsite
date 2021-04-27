@@ -1,7 +1,7 @@
 
 import CarouseShopKits from "./CarouseShopKits";
 import JuggerKits from "./JuggerKits";
-import Seeker from "./Seeker";
+import Seeker from "src/Seeker.js";
 
 
 const KitsShop = () => {
