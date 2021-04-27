@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import carouselImage1 from "/src/assets/BushidoShirt.jpg";
-import carouselImage2 from "/src/assets/LOTShirt.jpg";
-import carouselImage3 from "/src/assets/GuldenShirt.jpg";
+import carouselImage1 from "../assets/BushidoShirt.jpg";
+import carouselImage2 from "../assets/LOTShirt.jpg";
+import carouselImage3 from "../assets/GuldenShirt.jpg";
 
 const CarouseShopShirts= () => {
   return (
