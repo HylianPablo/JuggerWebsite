@@ -10,7 +10,11 @@ const NavbarJ = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/comunidad">Comunidad</Nav.Link>
+          <NavDropdown title="Comunidad" id="collasible-van-dropdown">
+            <NavDropdown.Item href="/mapa">Mapa</NavDropdown.Item>
+            <NavDropdown.Item href="/equipos">Equipos</NavDropdown.Item>
+            <NavDropdown.Item href="/nucleos">Nucleos</NavDropdown.Item>
+          </NavDropdown>
           <NavDropdown title="Torneos" id="collasible-van-dropdown">
             <NavDropdown.Item href="/torneos">Calendario de torneos</NavDropdown.Item>
             <NavDropdown.Item href="/torneosAnteriores">Torneos anteriores</NavDropdown.Item>

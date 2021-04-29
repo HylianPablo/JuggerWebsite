@@ -5,7 +5,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import NavbarJ from "./Utils/NavbarJ";
 import Home from "./Home";
-import Comunidad from "./Community/Comunidad.js";
+import Mapa from "./Community/Mapa.js";
+import Equipos from "./Community/Equipos.js"
+import Nucleos from "./Community/Nucleos.js"
 import AboutUs from "./Utils/AboutUs.js";
 import Ranking from "./Ranking/Ranking.js";
 import Registration from "./Users/Registration.js";
@@ -35,9 +37,15 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-        <Route path="/comunidad">
-          <Comunidad/>
+        <Route path="/mapa">
+          <Mapa/>
         </Route>
+        <Route path="/equipos">
+          <Equipos/>
+        </Route>
+        <Route path="/nucleos">
+          <Nucleos/>
+        </Route>         
         <Route path="/about">
           <AboutUs/>
         </Route>
