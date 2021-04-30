@@ -25,8 +25,8 @@ const Tournaments = () => {
       {" "}
       {/* CSS of this div should be changed in a future */}
       <br></br>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="tournamentsView">
+        <Row className="logoList2">
           <Col sm={3} className="logoList">
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
@@ -69,7 +69,10 @@ const Tournaments = () => {
             </Tab.Content>
           </Col>
         </Row>
+        <h1></h1>
       </Tab.Container>
+      <br></br>
+      <h1></h1>
     </div>
   );
 };

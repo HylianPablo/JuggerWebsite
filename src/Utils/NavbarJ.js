@@ -34,6 +34,12 @@ const NavbarJ = () => {
           </NavDropdown>
         </Nav>
         <Nav>
+          <Nav.Link href="/miPerfil">
+            <Button variant="secondary">Perfil</Button>
+          </Nav.Link>
+          <Nav.Link href="/miEquipo">
+            <Button variant="secondary">Equipo</Button>
+          </Nav.Link>
           <Nav.Link href="/iniciarSesion">
             <Button variant="warning">Inicia Sesión</Button>{' '}
             </Nav.Link>
