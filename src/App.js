@@ -12,6 +12,7 @@ import Registration from "./Users/Registration.js";
 import Footer from "./Utils/Footer.js";
 import Content from "./Content/Content.js";
 import SignIn from "./Users/SignIn";
+import Profile from "./Users/Profile.js";
 import Tournaments from "./Tournaments/Tournaments.js";
 import KitsShop from "./Shop/KitsShop";
 import WeaponShop from "./Shop/WeaponShop";
@@ -64,6 +65,9 @@ function App() {
         </Route>
         <Route path="/iniciarSesion">
           <SignIn/>
+        </Route>
+        <Route path="/miPerfil">
+          <Profile/>
         </Route>
         <Route path="/tiendaKits">
             <KitsShop/>
