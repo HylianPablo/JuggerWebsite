@@ -5,17 +5,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 
-import ActiveTournamentDesc from "../Tournaments/ActiveTournamentDesc.js";
+import ActiveTournamentDesc from "../Community/TeamDesc.js";
 
 import winter from "../assets/winter.png";
 import summer from "../assets/summer.png";
 import spring from "../assets/spring.png";
+import bushido from "../assets/Bushido-Escudo.png";
 
-const Tournaments = () => {
+const Teams = () => {
   const lipsum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   const [info, setInfo] = useState([
-    { title: "Winter Cup 2020", body: lipsum, location: "Huesca", date: "20 de enero", model: "Puntos" },
+    { title: "Bushido Jugger", body: lipsum, location: "Valladolid", date: "20 de enero", model: "Puntos" },
     { title: "Summer Cup 2020", body: lipsum, location: "Murcia", date: "20 de julio", model: "Piedras" },
     { title: "Spring Cup 2020", body: lipsum, location: "Islas Feroe", date: "30 de febrero", model: "Puntos" }
   ]);
@@ -32,7 +33,7 @@ const Tournaments = () => {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   {" "}
-                  <img src={winter} className="logoT"></img>
+                  <img src={bushido} className="logoT"></img>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -73,4 +74,4 @@ const Tournaments = () => {
     </div>
   );
 };
-export default Tournaments;
+export default Teams;

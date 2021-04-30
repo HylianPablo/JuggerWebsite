@@ -37,7 +37,7 @@ import credentials from "./credentials";
 
 const mapStyles = {
   width: "100%",
-  height: "100%",
+  height: "90%",
   position: 'relative',
 };
 
@@ -80,7 +80,7 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
-        zoom={6}
+        zoom={6.5}
         style={mapStyles}
         initialCenter={{
           lat: 40.416775,
