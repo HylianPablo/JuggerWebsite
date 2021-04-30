@@ -20,7 +20,6 @@ const NavbarJ = () => {
             <NavDropdown.Item href="/tiendaArmas">Armas</NavDropdown.Item>
             <NavDropdown.Item href="/tiendaKits">Equipaciones</NavDropdown.Item>
             <NavDropdown.Item href="/tiendaMerchandising">Merchandising</NavDropdown.Item>
-            
           </NavDropdown>
           <NavDropdown title="Contenidos" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Técnicas de Jugger</NavDropdown.Item>
