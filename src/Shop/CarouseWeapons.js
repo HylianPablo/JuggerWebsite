@@ -4,7 +4,7 @@ import carouselImage1 from "../assets/Armas.jpg";
 
 const CarouseWeapons = () => {
     return (
-        <Carousel className="carousel">
+        <Carousel className="carousel" >
           <Carousel.Item interval={1000}>
             <img
               className="d-block w-100"
@@ -12,8 +12,7 @@ const CarouseWeapons = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>Tendencias</h3>
-              <p>Equipacion Bushido</p>
+              <h3 style={{color:"black"}}>Tendencias</h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
