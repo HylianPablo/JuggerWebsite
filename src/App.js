@@ -73,6 +73,7 @@ function App() {
         <Route path="/iniciarSesion">
           <SignIn/>
         </Route>
+
         <Route path="/tiendaKits">
             <KitsShop/>
         </Route>
@@ -80,6 +81,7 @@ function App() {
             <WeaponShop/>
         </Route>
         <Route path="/tiendaMerchandising">
+
           <MerchandisingShop/>
         </Route>
         
