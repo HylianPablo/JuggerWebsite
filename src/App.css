@@ -54,6 +54,11 @@
   margin-right: 50px;
 }
 
+.gridPastTournaments {
+  position: relative;
+  left: 100px;
+}
+
 .leftRegistration {
   position: absolute;
   left: 50px;
@@ -147,4 +152,11 @@
 img {
       /* Para que sea responsiva */
   width: 100%;
+}
+.logoGrid {
+  margin-bottom: 5rem;
+}
+
+.leftLabel {
+  margin-left: 15px;
 }

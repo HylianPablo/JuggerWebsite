@@ -3,11 +3,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { SocialIcon } from "react-social-icons";
 
-import pablo from "./assets/perfil_Pablo.jpg";
-import kuma from "./assets/perfil_Kuma.PNG";
-import bob from "./assets/perfil_Bob.jpg";
-import dani from "./assets/perfil_Dani.jpg";
-import rasero from "./assets/perfil_Rasero.jpg";
+import pablo from "../assets/perfil_Pablo.jpg";
+import kuma from "../assets/perfil_Kuma.PNG";
+import bob from "../assets/perfil_Bob.jpg";
+import dani from "../assets/perfil_Dani.jpg";
+import rasero from "../assets/perfil_Rasero.jpg";
 
 const AboutUs = () => {
   return (
