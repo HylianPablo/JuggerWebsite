@@ -20,70 +20,90 @@ import MerchandisingShop from "./Shop/MerchandisingShop";
 import TeamRegistration from "./Tournaments/TeamRegistration.js";
 import PastTournaments from "./Tournaments/PastTournaments";
 import PastTournamentsInfo from "./Tournaments/PastTournamentInfo";
+import { Component } from "react";
 
-function App() {
-  const pageName = "Jugger Community";
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+  }
 
-  return (
-    <Router>
-      <div className="App page-container">
-        <div className="content">
-          <h1>{pageName}</h1>
-          <NavbarJ />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/comunidad">
-              <Comunidad />
-            </Route>
-            <Route path="/about">
-              <AboutUs />
-            </Route>
-            <Route path="/torneos/inscripcion">
-              <TeamRegistration />
-            </Route>
-            <Route path="/torneosAnteriores/descripcion">
-              <PastTournamentsInfo />
-            </Route>
-            <Route path="/torneosAnteriores">
-              <PastTournaments />
-            </Route>
-            <Route path="/torneos">
-              <Tournaments />
-            </Route>
-            <Route path="/ranking">
-              <Ranking />
-            </Route>
-            <Route path="/Yulia">
-              <Content />
-            </Route>
-            <Route path="/registro">
-              <Registration />
-            </Route>
-            <Route path="/iniciarSesion">
-              <SignIn />
-            </Route>
-            <Route path="/miPerfil">
-              <Profile />
-            </Route>
-            <Route path="/tiendaKits">
-              <KitsShop />
-            </Route>
-            <Route path="/tiendaArmas">
-              <WeaponShop />
-            </Route>
-            <Route path="/tiendaMerchandising">
-              <MerchandisingShop />
-            </Route>
-          </Switch>
+  callAPI() {
+    fetch("http://localhost:9000/testAPI")
+    .then(res => res.text())
+    .then(res => this.setState({ apiResponse: res}))
+    .catch(err => err);
+  }
+
+  componentDidMount() {
+    this.callAPI();
+  }
+  
+  render() {
+    const pageName = "Jugger Community";
+    return (
+      <Router>
+        <div className="App page-container">
+          <div className="content">
+            <h1>{pageName}</h1>
+            <NavbarJ />
+            {/* EJEMPLO DE UNION A BACKEND*/}
+            <p>{this.state.apiResponse}</p>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/comunidad">
+                <Comunidad />
+              </Route>
+              <Route path="/about">
+                <AboutUs />
+              </Route>
+              <Route path="/torneos/inscripcion">
+                <TeamRegistration />
+              </Route>
+              <Route path="/torneosAnteriores/descripcion">
+                <PastTournamentsInfo />
+              </Route>
+              <Route path="/torneosAnteriores">
+                <PastTournaments />
+              </Route>
+              <Route path="/torneos">
+                <Tournaments />
+              </Route>
+              <Route path="/ranking">
+                <Ranking />
+              </Route>
+              <Route path="/Yulia">
+                <Content />
+              </Route>
+              <Route path="/registro">
+                <Registration />
+              </Route>
+              <Route path="/iniciarSesion">
+                <SignIn />
+              </Route>
+              <Route path="/miPerfil">
+                <Profile />
+              </Route>
+              <Route path="/tiendaKits">
+                <KitsShop />
+              </Route>
+              <Route path="/tiendaArmas">
+                <WeaponShop />
+              </Route>
+              <Route path="/tiendaMerchandising">
+                <MerchandisingShop />
+              </Route>
+            </Switch>
+          </div>
+          <footer className="footer">
+            <Footer />
+          </footer>
         </div>
-        <footer className="footer">
-          <Footer />
-        </footer>
-      </div>
-    </Router>
-  );
+      </Router>
+    );
+  }
 }
 
 export default App;
