@@ -18,8 +18,11 @@ import KitsShop from "./Shop/KitsShop";
 import WeaponShop from "./Shop/WeaponShop";
 import MerchandisingShop from "./Shop/MerchandisingShop";
 import TeamRegistration from "./Tournaments/TeamRegistration.js";
-import PastTournaments from "./Tournaments/PastTournaments";
-import PastTournamentsInfo from "./Tournaments/PastTournamentInfo";
+import PastTournaments from "./Tournaments/PastTournaments.js";
+import PastTournamentsInfo from "./Tournaments/PastTournamentInfo.js";
+import Team from "./Users/Team.js";
+
+
 import { Component } from "react";
 
 class App extends Component {
@@ -85,6 +88,9 @@ class App extends Component {
               </Route>
               <Route path="/miPerfil">
                 <Profile />
+              </Route>
+              <Route path="/miEquipo">
+                <Team />
               </Route>
               <Route path="/tiendaKits">
                 <KitsShop />
