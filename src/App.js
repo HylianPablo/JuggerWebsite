@@ -59,7 +59,7 @@ class App extends Component {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route pmnpmath="/mapa">
+              <Route path="/mapa">
               <Map/>
             </Route>
             <Route path="/equipos">
@@ -67,7 +67,7 @@ class App extends Component {
             </Route>
             <Route path="/nucleos">
               <Nucleos/>
-            </Route>     
+            </Route>  
               <Route path="/about">
                 <AboutUs />
               </Route>
