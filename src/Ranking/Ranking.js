@@ -1,16 +1,17 @@
-import MasterRanking from "./MasterRanking.js";
-import NormalRanking from "./NormalRanking.js";
+import Table from "./TableRanking.js";
 
 const Ranking = () => {
 
     return(
       <div>
-        <h1>Master</h1>
-        <MasterRanking></MasterRanking>
-        <h1>Normal</h1>
-        <NormalRanking></NormalRanking>
+        <br/>
+        <h1>Ranking Abril 2021</h1>
+        <div>
+          
+          <Table></Table>
+          
+        </div>
       </div>
-      
     );
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-import credentials from "./credentials";
+import credentials from "../credentials";
 
 const mapStyles = {
   width: "100%",

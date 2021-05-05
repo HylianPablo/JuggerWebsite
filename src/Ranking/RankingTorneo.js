@@ -1,10 +1,10 @@
 import Table from "react-bootstrap/Table";
 import { useState} from 'react';
 
-const NormalRanking = () => {
+const RankingTorneo = () => {
     const M=30;
   
-    const [normalRanking, setNormalRanking] = useState ([
+    const [rankingTorneo, setRankingTorneo] = useState ([
       { post: 1, tName: 'Bushido', core: 'Valladolid', mPoints: 1000, points: 1000000 },
       { post: 2, tName: 'Gulden', core: 'Valladolid', mPoints: 500, points: 200000 },
       { post: 3, tName: 'Lotentencia', core: 'Valladolid', mPoints: 500, points: 50000 },
@@ -15,7 +15,7 @@ const NormalRanking = () => {
   
   
       return(
-        <Table striped bordered hover>
+        <Table  width="100%">
         <thead>
           <tr>
             <th>#</th>
@@ -26,7 +26,7 @@ const NormalRanking = () => {
           </tr>
         </thead>
         <tbody>
-          {normalRanking.map((rank) => (
+          {rankingTorneo.map((rank) => (
             <tr key={rank.post}>
               <td>{rank.post}</td>
               <td>{rank.tName}</td>
@@ -40,4 +40,4 @@ const NormalRanking = () => {
       );
   }
   
-  export default NormalRanking;
+  export default RankingTorneo;
