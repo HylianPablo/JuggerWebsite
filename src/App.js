@@ -16,9 +16,7 @@ import Content from "./Content/Content.js";
 import SignIn from "./Users/SignIn";
 import Profile from "./Users/Profile.js";
 import Tournaments from "./Tournaments/Tournaments.js";
-import KitsShop from "./Shop/KitsShop";
-import WeaponShop from "./Shop/WeaponShop";
-import MerchandisingShop from "./Shop/MerchandisingShop";
+import KitsShop from "./Shop/Shop";
 import TeamRegistration from "./Tournaments/TeamRegistration.js";
 import PastTournaments from "./Tournaments/PastTournaments.js";
 import PastTournamentsInfo from "./Tournaments/PastTournamentInfo.js";
@@ -101,14 +99,8 @@ class App extends Component {
               <Route path="/miEquipo">
                 <Team />
               </Route>
-              <Route path="/tiendaKits">
+              <Route path="/tiendaKits/:id">
                 <KitsShop />
-              </Route>
-              <Route path="/tiendaArmas">
-                <WeaponShop />
-              </Route>
-              <Route path="/tiendaMerchandising">
-                <MerchandisingShop />
               </Route>
             </Switch>
           </div>
