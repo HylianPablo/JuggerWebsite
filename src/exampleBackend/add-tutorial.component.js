@@ -10,12 +10,9 @@ export default class AddTutorial extends Component {
     this.newTutorial = this.newTutorial.bind(this);
 
     this.state = {
-      id: null,
       name: "",
       surname: "", 
       nick: "taka",
-
-      submitted: false
     };
   }
 
@@ -57,12 +54,9 @@ export default class AddTutorial extends Component {
 
   newTutorial() {
     this.setState({
-      id: null,
       name: "",
       surname: "",
       nick: "taka",
-
-      submitted: false
     });
   }
 

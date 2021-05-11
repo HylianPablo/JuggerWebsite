@@ -13,10 +13,9 @@ export default class Tutorial extends Component {
 
     this.state = {
       currentTutorial: {
-        id: null,
-        name: "",
-        surname: "",
-        nick: "taka"
+        Name: "",
+        Surname: "",
+        Nick: "taka"
       },
       message: ""
     };
@@ -33,7 +32,7 @@ export default class Tutorial extends Component {
       return {
         currentTutorial: {
           ...prevState.currentTutorial,
-          name: name
+          Name: name
         }
       };
     });
