@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/user.service";
 
 export default class Tutorial extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class Tutorial extends Component {
   }
 
   componentDidMount() {
-    this.getTutorial(this.props.match.params.id);
+    this.getTutorial(this.props.match.params.name);
   }
 
   onChangeName(e) {
@@ -49,8 +49,8 @@ export default class Tutorial extends Component {
     }));
   }
 
-  getTutorial(id) {
-    TutorialDataService.get(id)
+  getTutorial(name) {
+    TutorialDataService.get(name)
       .then(response => {
         this.setState({
           currentTutorial: response.data
@@ -64,7 +64,6 @@ export default class Tutorial extends Component {
 
   updatePublished(status) {
     var data = {
-      id: this.state.currentTutorial.id,
       name: this.state.currentTutorial.name,
       surname: this.state.currentTutorial.surname,
       nick: "taka",

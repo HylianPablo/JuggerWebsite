@@ -2,15 +2,15 @@ import http from "../http-common";
 
 class TutorialDataService {
   getAll() {
-    return http.get("/tutorials");
+    return http.get("/user");
   }
 
-  get(id) {
-    return http.get(`/tutorials/${id}`);
+  get(name) {
+    return http.get(`/user/${name}`);
   }
 
   create(data) {
-    return http.post("/tutorials", data);
+    return http.post("/user", data);
   }
 
   update(id, data) {
@@ -26,7 +26,7 @@ class TutorialDataService {
   }
 
   findByName(name) {
-    return http.get(`/tutorials?title=${name}`);
+    return http.get(`/user?name=${name}`);
   }
 }
 
