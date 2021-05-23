@@ -10,7 +10,7 @@ import Teams from "./Community/Teams.js"
 import Nucleos from "./Community/Nucleos.js"
 import AboutUs from "./Utils/AboutUs.js";
 import Ranking from "./Ranking/Ranking.js";
-import Registration from "./Users/RegistDemo.js";
+import Registration from "./Users/Registration.js";
 import Footer from "./Utils/Footer.js";
 import Content from "./Content/Content.js";
 import SignIn from "./Users/SignIn";
