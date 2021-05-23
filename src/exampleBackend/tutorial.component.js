@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/user.service";
 
 export default class Tutorial extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class Tutorial extends Component {
   }
 
   componentDidMount() {
-    this.getTutorial(this.props.match.params.id);
+    this.getTutorial(this.props.match.params.name);
   }
 
   onChangeName(e) {
@@ -49,8 +49,8 @@ export default class Tutorial extends Component {
     }));
   }
 
-  getTutorial(id) {
-    TutorialDataService.get(id)
+  getTutorial(name) {
+    TutorialDataService.get(name)
       .then(response => {
         this.setState({
           currentTutorial: response.data
@@ -64,13 +64,12 @@ export default class Tutorial extends Component {
 
   updatePublished(status) {
     var data = {
-      id: this.state.currentTutorial.id,
       name: this.state.currentTutorial.name,
       surname: this.state.currentTutorial.surname,
       nick: "taka",
     };
 
-    TutorialDataService.update(this.state.currentTutorial.id, data)
+    TutorialDataService.update(this.state.currentTutorial.name, data)
       .then(response => {
         this.setState(prevState => ({
           currentTutorial: {
@@ -87,7 +86,7 @@ export default class Tutorial extends Component {
 
   updateTutorial() {
     TutorialDataService.update(
-      this.state.currentTutorial.id,
+      this.state.currentTutorial.name,
       this.state.currentTutorial
     )
       .then(response => {
@@ -102,10 +101,10 @@ export default class Tutorial extends Component {
   }
 
   deleteTutorial() {    
-    TutorialDataService.delete(this.state.currentTutorial.id)
+    TutorialDataService.delete(this.state.currentTutorial.name)
       .then(response => {
         console.log(response.data);
-        this.props.history.push('/tutorials')
+        this.props.history.push('/userFront')
       })
       .catch(e => {
         console.log(e);

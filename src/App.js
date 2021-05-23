@@ -35,16 +35,8 @@ class App extends Component {
     this.state = { apiResponse: "" };
   }
 
-  callAPI() {
-    fetch("http://localhost:9000/testAPI")
-    .then(res => res.text())
-    .then(res => this.setState({ apiResponse: res}))
-    .catch(err => err);
-  }
-
 
   componentDidMount() {
-    this.callAPI();
   }
   
   render() {
@@ -61,9 +53,9 @@ class App extends Component {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path={"/tutorials"} component={TutorialsList} />
+              <Route exact path={"/userFront"} component={TutorialsList} />
             <Route exact path="/add" component={AddTutorial} />
-            <Route path="/tutorials/:id" component={Tutorial} />
+            <Route path="/userFront/:name" component={Tutorial} />
               <Route path="/mapa">
               <Map/>
             </Route>

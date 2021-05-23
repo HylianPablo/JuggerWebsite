@@ -45,7 +45,10 @@ const NavbarJ = () => {
             <Button variant="secondary">Equipo</Button>
           </Nav.Link>
           <Nav.Link href="/add">
-            <Button variant="secondary">Backend</Button>
+            <Button variant="secondary">Backend Add</Button>
+          </Nav.Link>
+          <Nav.Link href="/userFront">
+            <Button variant="secondary">Backend List</Button>
           </Nav.Link>
           <Nav.Link href="/iniciarSesion">
             <Button variant="warning">Inicia Sesión</Button>{' '}
