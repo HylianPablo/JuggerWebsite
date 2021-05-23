@@ -13,16 +13,16 @@ class TutorialDataService {
     return http.post("/user", data);
   }
 
-  update(id, data) {
-    return http.put(`/tutorials/${id}`, data);
+  update(name, data) {
+    return http.put(`/user/${name}`, data);
   }
 
-  delete(id) {
-    return http.delete(`/tutorials/${id}`);
+  delete(name) {
+    return http.delete(`/user/${name}`);
   }
 
   deleteAll() {
-    return http.delete(`/tutorials`);
+    return http.delete(`/user`);
   }
 
   findByName(name) {

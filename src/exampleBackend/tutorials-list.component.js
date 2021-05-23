@@ -160,7 +160,7 @@ export default class TutorialsList extends Component {
               </div>
 
               <Link
-                to={"/user/" + currentTutorial.name}
+                to={"/userFront/" + currentTutorial.name}
                 className="badge badge-warning"
               >
                 Edit
