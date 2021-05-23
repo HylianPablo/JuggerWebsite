@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/user.service";
 import { Link } from "react-router-dom";
 
 export default class TutorialsList extends Component {
@@ -16,7 +16,7 @@ export default class TutorialsList extends Component {
       tutorials: [],
       currentTutorial: null,
       currentIndex: -1,
-      searchTitle: ""
+      searchName: ""
     };
   }
 
@@ -41,6 +41,7 @@ export default class TutorialsList extends Component {
         console.log(response.data);
       })
       .catch(e => {
+        console.log("Error: no pasa getAll frontend");
         console.log(e);
       });
   }
@@ -94,7 +95,7 @@ export default class TutorialsList extends Component {
             <input
               type="text"
               className="form-control"
-              placeholder="Search by title"
+              placeholder="Search by name"
               value={searchName}
               onChange={this.onChangeSearchName}
             />
@@ -123,7 +124,7 @@ export default class TutorialsList extends Component {
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                  {tutorial.title}
+                  {tutorial.name}
                 </li>
               ))}
           </ul>
@@ -141,7 +142,7 @@ export default class TutorialsList extends Component {
               <h4>Tutorial</h4>
               <div>
                 <label>
-                  <strong>Title:</strong>
+                  <strong>Name:</strong>
                 </label>{" "}
                 {currentTutorial.name}
               </div>
@@ -159,7 +160,7 @@ export default class TutorialsList extends Component {
               </div>
 
               <Link
-                to={"/tutorials/" + currentTutorial.id}
+                to={"/user/" + currentTutorial.name}
                 className="badge badge-warning"
               >
                 Edit
