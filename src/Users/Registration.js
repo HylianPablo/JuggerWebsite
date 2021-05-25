@@ -200,12 +200,19 @@ export default class Registration extends Component {
                     <InputGroup.Prepend>
                       <InputGroup.Text>@</InputGroup.Text>
                     </InputGroup.Prepend>
-                    <FormControl id="inlineFormInputGroup" placeholder="Username" />
+                    <FormControl 
+                      placeholder="Username" 
+                      id="username"
+                      required
+                      value={this.state.username}
+                      onChange={this.onChangeUsername}
+                      name="username"      
+                    />
                   </InputGroup>
                 </Col>
               </Row>
             </Form.Group>
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group>
               <OverlayTrigger
                 overlay={
                   <Tooltip>
@@ -218,10 +225,16 @@ export default class Registration extends Component {
                 <Form.Control
                   type="email"
                   placeholder="Dirección de correo electrónico"
+                  className="form-control"
+                  id="email"
+                  required
+                  value={this.state.email}
+                  onChange={this.onChangeEmail}
+                  name="email"
                 />
               </OverlayTrigger>
             </Form.Group>
-            <Form.Group controlId="formDNI">
+            <Form.Group>
               <OverlayTrigger
                 overlay={
                   <Tooltip>
@@ -231,7 +244,16 @@ export default class Registration extends Component {
                 }
                 delay={{ show: 250, hide: 350 }}
               >
-                <Form.Control type="text" placeholder="DNI/NIF" />
+                <Form.Control 
+                  type="text" 
+                  placeholder="DNI/NIF" 
+                  className="form-control"
+                  id="nif"
+                  required
+                  value={this.state.nif}
+                  onChange={this.onChangeNIF}
+                  name="nif"                  
+                  />
               </OverlayTrigger>
             </Form.Group>
 
