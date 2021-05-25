@@ -21,13 +21,22 @@ export default class Registration extends Component {
     super(props);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeSurname = this.onChangeSurname.bind(this);
+    this.onChangeNick = this.onChangeNick.bind(this);
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onChangeNIF = this.onChangeNIF.bind(this);
+    this.onChangePassword = this.onChangePassword.bind(this);
     this.saveTutorial = this.saveTutorial.bind(this);
     this.newTutorial = this.newTutorial.bind(this);
  
     this.state = {
       name: "",
       surname: "", 
-      nick: "taka",
+      nick: "",
+      username: "",
+      email: "",
+      nif: "",
+      password: "",
     };
   }
 
@@ -45,11 +54,45 @@ export default class Registration extends Component {
     });
   }
 
+  onChangeNick(e) {
+    this.setState({
+      nick: e.target.value
+    });
+  }
+
+  onChangeUsername(e) {
+    this.setState({
+      username: e.target.value
+    });
+  }
+
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  onChangeNIF(e) {
+    this.setState({
+      nif: e.target.value
+    });
+  }
+
+  onChangePassword(e) {
+    this.setState({
+      password: e.target.value
+    });
+  }
+
   saveTutorial() {
     var data = {
       name: this.state.name,
       surname: this.state.surname,
-      nick: "taka"
+      nick: this.state.nick,
+      username: this.state.username,
+      email: this.state.email,
+      nif: this.state.nif,
+      password: this.state.password
     };
 
     TutorialDataService.create(data)
@@ -58,7 +101,11 @@ export default class Registration extends Component {
           id: response.data.id,
           name: response.data.name,
           surname: response.data.surname,
-          nick: "taka",
+          nick: response.data.nick,
+          username: response.data.username,
+          email: response.data.email,
+          nif: response.data.nif,
+          password: response.data.password,
 
           submitted: true
         });
@@ -72,8 +119,13 @@ export default class Registration extends Component {
   newTutorial() {
     this.setState({
       name: "",
-      surname: "",
-      nick: "taka",
+      surname: "", 
+      nick: "",
+      username: "",
+      email: "",
+      nif: "",
+      password: "",
+
     });
   }
 
@@ -96,10 +148,10 @@ export default class Registration extends Component {
               <Row>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="name">Name</label>
                     <input
                       type="text"
                       className="form-control"
+                      placeholder = "Nombre"
                       id="name"
                       required
                       value={this.state.name}
@@ -110,10 +162,10 @@ export default class Registration extends Component {
                 </Col>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="surname">Surname</label>
                     <input
                       type="text"
                       className="form-control"
+                      placeholder="Apellidos"
                       id="surname"
                       required
                       value={this.state.surname}
@@ -124,10 +176,21 @@ export default class Registration extends Component {
                 </Col>
               </Row>
             </Form.Group>
-            <Form.Group controlId="formNickUsername">
+            <Form.Group>
               <Row>
                 <Col>
-                  <Form.Control type="text" placeholder="Apodo" />
+                  <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder = "Apodo"
+                        id="nick"
+                        required
+                        value={this.state.nick}
+                        onChange={this.onChangeNick}
+                        name="nick"
+                      />
+                    </div>
                 </Col>
                 <Col>
                   <Form.Label htmlFor="inlineFormInputGroup" srOnly>
@@ -175,10 +238,29 @@ export default class Registration extends Component {
             <Form.Group controlId="formBasicPassword">
               <Row>
                 <Col>
-                  <Form.Control type="password" placeholder="Contraseña" />
+                <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder = "Contraseña"
+                      id="password"
+                      required
+                      value={this.state.password}
+                      onChange={this.onChangePassword}
+                      name="password"
+                    />
+                  </div>
                 </Col>
                 <Col>
-                  <Form.Control type="password" placeholder="Repita la contraseña" />
+                 <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder = "Repita la contraseña"
+                      id="password2"
+                      name="password2"
+                    />
+                  </div>
                 </Col>
               </Row>
             </Form.Group>

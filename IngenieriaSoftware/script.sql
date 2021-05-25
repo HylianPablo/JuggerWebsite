@@ -1,5 +1,7 @@
 -- El foro no está incluido en esta versión
 
+use testdb;
+
 DROP TABLE IF EXISTS Torneo;
 DROP TABLE IF EXISTS InscripcionTorneo;
 DROP TABLE IF EXISTS Arma;
