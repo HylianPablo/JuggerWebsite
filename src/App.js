@@ -1,4 +1,5 @@
 //import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -27,7 +28,6 @@ import AddTutorial from "./exampleBackend/add-tutorial.component";
 import Tutorial from "./exampleBackend/tutorial.component";
 
 
-import { Component } from "react";
 
 class App extends Component {
   constructor(props) {

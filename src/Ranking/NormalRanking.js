@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
 import { useState} from 'react';
 

@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import { useState } from "react";
 
 import Row from "react-bootstrap/Row";

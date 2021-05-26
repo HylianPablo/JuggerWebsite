@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Image1 from "../assets/qtip1.jpg";
 import Image2 from "../assets/qtip2.jpg";
 import Image3 from "../assets/qtip3.jpg";

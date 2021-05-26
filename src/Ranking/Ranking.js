@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import MasterRanking from "./MasterRanking.js";
 import NormalRanking from "./NormalRanking.js";
 

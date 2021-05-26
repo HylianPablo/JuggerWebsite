@@ -1,4 +1,4 @@
-
+import React, { Component } from "react";
 import CarouseShopKits from "./CarouseShopKits";
 import JuggerKits from "./JuggerKits";
 import CarouseWeapons from "./CarouseWeapons";

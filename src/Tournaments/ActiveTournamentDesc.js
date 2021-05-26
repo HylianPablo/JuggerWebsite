@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import { Nav } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";

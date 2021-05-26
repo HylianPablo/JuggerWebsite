@@ -1,25 +1,116 @@
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import React, { Component } from "react";
+import {observer} from 'mobx-react';
+import UserStore from './stores/UserStore';
+import LoginForm from './LoginForm';
+import SubmitButton from './SubmitButton';
+import './user.css'
 
-const SignIn = () => {
-  return (
-    <Form className="registrationForm">
-      <br></br>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Control type="text" placeholder="Nombre de usuario" />
-      </Form.Group>
 
-      <Form.Group controlId="formBasicPassword">
-        <Form.Control type="password" placeholder="Contraseña" />
-      </Form.Group>
-      <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Recuérdame" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Iniciar Sesión
-      </Button>
-    </Form>
-  );
-};
+class SignIn extends React.Component{
 
-export default SignIn;
+  async componentDidMount(){
+
+    try {
+
+      let res = await fetch('/isLoggedIn', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      let result = await res.json();
+
+      if(result && result.success){
+
+        UserStore.loading = false;
+        UserStore.isLoggedIn = true;
+        UserStore.username = result.username;
+
+      }else{
+        UserStore.loading = false;
+        UserStore.isLoggedIn = false;
+
+      }
+
+    }
+
+    catch(e){
+      UserStore.loading = false;
+      UserStore.isLoggedIn = false;
+
+    }
+
+  }
+
+  async doLogout(){
+
+    try {
+
+      let res = await fetch('/logout', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      let result = await res.json();
+
+      if(result && result.success){
+
+        UserStore.isLoggedIn = false;
+        UserStore.username = '';
+
+      }
+
+    }
+
+    catch(e){
+      console.log(e);
+    }
+
+  }
+
+  render(){
+
+    if(UserStore.loading){
+      return(
+        <div className="signIn">
+          <div className= 'container'>
+            Loading, please wait..
+          </div>
+        </div>
+      );
+    }else{
+
+      if(UserStore.isLoggedIn){
+        return(
+          <div className = "signIn">
+            <div className='container'>
+              Welcome {UserStore.username}
+              <SubmitButton
+                text={'Log out'}
+                disabled={false}
+                onClick={() => this.doLogout()}
+              />
+            </div>
+          </div>
+        )
+
+
+      }
+
+      return(
+        <div className="signIn">
+          <div className='container'>
+            <LoginForm />
+          </div>
+        </div>
+      )
+    }
+  }
+}
+
+export default observer(SignIn);
