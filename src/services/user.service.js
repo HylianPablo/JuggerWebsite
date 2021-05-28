@@ -5,8 +5,8 @@ class TutorialDataService {
     return http.get("/user");
   }
 
-  get(name) {
-    return http.get(`/user/${name}`);
+  get(id) {
+    return http.get(`/login/${id}`);
   }
 
   create(data) {
