@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 
-import ActiveTournamentDesc from "../Tournaments/ActiveTournamentDesc.js";
+import ActiveTournamentDesc from "../Tournaments/Tournaments.js";
 
 import winter from "../assets/winter.png";
 import summer from "../assets/summer.png";

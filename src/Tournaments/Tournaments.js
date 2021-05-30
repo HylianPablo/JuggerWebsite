@@ -1,79 +1,136 @@
-import { useState } from "react";
-
+import { Component } from "react";
 import Tab from "react-bootstrap/Tab";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
+import Button from "react-bootstrap/Button";
+import Table from "react-bootstrap/Table";
 
-import ActiveTournamentDesc from "./ActiveTournamentDesc.js";
+import TournamentDataService from "../services/tournament.service";
+import { ResponsiveEmbed } from "react-bootstrap";
 
-import winter from "../assets/winter.png";
-import summer from "../assets/summer.png";
-import spring from "../assets/spring.png";
+export default class ActiveTournamentDesc extends Component {
+  constructor(props) {
+    super(props);
+    this.retrieveTournaments = this.retrieveTournaments.bind(this);
+    this.refreshList = this.refreshList.bind(this);
+    this.setActiveTournament = this.setActiveTournament.bind(this);
 
-const Tournaments = () => {
-  const lipsum =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-  const [info, setInfo] = useState([
-    { title: "Winter Cup 2020", body: lipsum, location: "Huesca", date: "20 de enero", model: "Puntos" },
-    { title: "Summer Cup 2020", body: lipsum, location: "Murcia", date: "20 de julio", model: "Piedras" },
-    { title: "Spring Cup 2020", body: lipsum, location: "Islas Feroe", date: "30 de febrero", model: "Puntos" }
-  ]);
+    this.state = {
+      tournaments: [],
+      currentTournament: null,
+      currentIndex: -1,
+    };
+  }
 
-  return (
-    <div className="registrationForm">
-      {" "}
-      {/* CSS of this div should be changed in a future */}
-      <br></br>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="tournamentsView">
-        <Row className="logoList2">
-          <Col sm={3} className="logoList">
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="first">
-                  {" "}
-                  <img src={winter} className="logoT"></img>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second">
-                  {" "}
-                  <img src={summer} className="logoT"></img>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="third">
-                  {" "}
-                  <img src={spring} className="logoT"></img>
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9}>
-            <Tab.Content>
-              <Tab.Pane eventKey="first">
-                <div>
-                  <ActiveTournamentDesc info={info[0]} />
-                </div>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <div>
-                  <ActiveTournamentDesc info={info[1]} />
-                </div>
-              </Tab.Pane>
-              <Tab.Pane eventKey="third">
-                <div>
-                  <ActiveTournamentDesc info={info[2]} />
-                </div>
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-        <h1></h1>
-      </Tab.Container>
-      <br></br>
-      <h1></h1>
-    </div>
-  );
-};
-export default Tournaments;
+  componentDidMount() {
+    this.retrieveTournaments();
+  }
+
+  retrieveTournaments() {
+    TournamentDataService.getAll()
+      .then((response) => {
+        this.setState({
+          tournaments: response.data,
+          currentTournament: response.data[0]
+        });
+        console.log(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  refreshList() {
+    this.retrieveTournaments();
+    this.setState({
+      currentTournament: null,
+      currentIndex: -1,
+    });
+  }
+
+  setActiveTournament(tournament, index) {
+    this.setState({
+      currentTournament: tournament,
+      currentIndex: index,
+    });
+  }
+
+  render() {
+    const { tournaments, currentTournament, currentIndex } = this.state;
+
+    return (
+      <div className="registrationForm">
+        <Tab.Container
+          id="left-tabs-example"
+          defaultActiveKey="first"
+          className="tournamentsView"
+        >
+          <Row className="logoList2">
+            <Col sm={3} className="logoList">
+              {tournaments &&
+                tournaments.map((tournament, index) => (
+                  <Nav
+                    variant="pills"
+                    className={
+                      "flex-column" +
+                      (index === currentIndex ? "active" : "")
+                    }
+                    onClick={() => this.setActiveTournament(tournament, index)}
+                    key={index}
+                  >
+                    <Nav.Item>
+                      <Nav.Link eventKey={tournament.id}>
+                      <img src={tournament.image} className="logoT"></img>
+                      </Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                ))}
+            </Col>
+            <Col sm={9}>
+              <Tab.Content>
+                {currentTournament ? (
+                  <div>
+                    <h4>{currentTournament.name}</h4>
+                    <div>
+                      <Table striped bordered hover>
+                        <tbody>
+                          <tr>
+                            <th>Ubicación</th>
+                            <td>{currentTournament.location}</td>
+                          </tr>
+                          <tr>
+                            <th>Fecha</th>
+                            <td>{currentTournament.date}</td>
+                          </tr>
+                          <tr>
+                            <th>Modelo</th>
+                            <td>{currentTournament.model}</td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                      <br></br>
+                      <Button
+                        variant="primary"
+                        size="lg"
+                        block
+                        href="/torneos/inscripcion"
+                      >
+                        Inscríbe a tu equipo
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <br />
+                    <p>No se han podido cargar los torneos correctamente.</p>
+                  </div>
+                )}
+              </Tab.Content>
+            </Col>
+          </Row>
+        </Tab.Container>
+      </div>
+    );
+  }
+}

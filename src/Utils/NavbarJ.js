@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 const NavbarJ = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="/">Inicio</Navbar.Brand>
+      <Navbar.Brand href="/" className="">Inicio</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
@@ -51,10 +51,10 @@ const NavbarJ = () => {
             <Button variant="secondary">Backend List</Button>
           </Nav.Link>
           <Nav.Link href="/iniciarSesion">
-            <Button variant="warning">Inicia Sesión</Button>{' '}
+            <Button variant="default" style={{background: "#BCB6FF", color: "black"}}>Inicia Sesión</Button>{' '}
             </Nav.Link>
           <Nav.Link eventKey={2} href="/registro">
-          <Button variant="primary">Regístrate</Button>{' '}
+          <Button variant="default" style={{background: "#94FBAB", color: "black"}}>Regístrate</Button>{' '}
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

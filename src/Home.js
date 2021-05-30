@@ -2,7 +2,7 @@ import CarouselJ from "./Utils/CarouselJ";
 
 const Home = () => {
   return (
-    <div className="main">
+    <div className="main secondary">
       <CarouselJ />
       <br></br>
     </div>

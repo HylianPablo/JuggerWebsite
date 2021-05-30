@@ -7,7 +7,58 @@
   pointer-events: none;
 }
 
+/* COLORS */
 
+.primary1 {
+  background: #BCB6FF;
+}
+
+.secondary {
+  background-color: #B8E1FF;
+}
+
+.ternary {
+  color: #A9FFF7;
+}
+
+.fourthColor {
+  color: #94FBAB;
+}
+
+.fifthColor {
+  color: #82ABA1;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: hiker;
+  src: url("assets/HikerFont.ttf");
+}
+
+@font-face {
+  font-family: rockwell;
+  src: url("assets/rockwellFont.ttf");
+}
+
+@font-face {
+  font-family: museo;
+  src: url("assets/museoFont.otf");
+}
+
+@font-face {
+  font-family: promesh;
+  src: url("assets/promeshFont.ttf");
+}
+
+.title {
+  font-family: promesh;
+  font-size: 6em;
+}
+
+.buttonFont {
+  font-family: museo;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -169,5 +220,14 @@ img {
 
 .leftLabel {
   margin-left: 15px;
+}
+
+.tournamentList {
+  list-style-type: none;
+}
+
+.selected {
+  color: blue;
+  border-left: 4px solid blue;
 }
 

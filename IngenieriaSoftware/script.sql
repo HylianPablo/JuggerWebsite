@@ -18,21 +18,17 @@ CREATE TABLE Equipo(
 	PRIMARY KEY (nombre)
 	);
 
-CREATE TABLE Usuario(
-	nombre CHAR(20) NOT NULL,
-	apellidos CHAR(40) NOT NULL,
-	nick CHAR(20) NOT NULL,
-	nif CHAR(9) NOT NULL,
-	username CHAR(20) NOT NULL,
-	password CHAR(20) NOT NULL,
-	telefono INTEGER NOT NULL,
-	equipo CHAR(20),
-	capitan BOOLEAN,
-	admin BOOLEAN DEFAULT FALSE,
-	photo CHAR(80) NOT NULL,
-	PRIMARY KEY (username),
-	FOREIGN KEY (equipo) REFERENCES Equipo(nombre)
-	);
+CREATE TABLE user (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name char(20) NOT NULL,
+  surname char(40) NOT NULL,
+  nick char(20) NOT NULL,
+  username char(20) NOT NULL,
+  email varchar(45) NOT NULL,
+  nif char(9) NOT NULL,
+  password varchar(240) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1'
 
 CREATE TABLE ObjetoTienda(
 	codigo INTEGER NOT NULL AUTO_INCREMENT,
