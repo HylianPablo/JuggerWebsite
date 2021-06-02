@@ -226,8 +226,8 @@ img {
   list-style-type: none;
 }
 
-.selected {
-  color: blue;
-  border-left: 4px solid blue;
+.imageLogoPast {
+  border: 0.2em solid #000000;
+  background-color: #82ABA1;
+  width:110%;
 }
-

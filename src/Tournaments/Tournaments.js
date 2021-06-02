@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
 import TournamentDataService from "../services/tournament.service";
-import { ResponsiveEmbed } from "react-bootstrap";
 
 export default class ActiveTournamentDesc extends Component {
   constructor(props) {

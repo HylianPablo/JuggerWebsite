@@ -10,6 +10,10 @@ class TournamentDataservice {
     get(id) {
         return http.get(`/tournament/${id}`);
     }
+
+    getAllByYear(yearTop, yearBot) {
+        return http.get(`/tournament/?yearTop=${yearTop}&yearBot=${yearBot}`);
+    }
 }
 
 export default new TournamentDataservice();

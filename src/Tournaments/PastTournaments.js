@@ -42,17 +42,17 @@ const PastTournaments = () => {
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2020-01-01 12:00:00" yearBot="2020-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2019-01-01 12:00:00" yearBot="2019-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2018-01-01 12:00:00" yearBot="2018-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
             </Tab.Content>
