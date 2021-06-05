@@ -10,29 +10,29 @@ const PastTournaments = () => {
   return (
     <div className="registrationForm">
       {" "}
-      <h1>Torneos anteriores</h1>
+      <h1 className="subtitle">Torneos anteriores</h1>
       {/* CSS of this div should be changed in a future */}
       <br></br>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first" className="gridPastTournaments">
         <Row>
           <Col sm={3} className="logoList">
-            <ListGroup defaultActiveKey="#link1">
-              <ListGroup.Item action eventKey="first">
+            <ListGroup >
+              <ListGroup.Item action eventKey="first" variant="success">
                 2020
               </ListGroup.Item>
-              <ListGroup.Item action eventKey="second">
+              <ListGroup.Item action eventKey="second" variant="success">
                 2019
               </ListGroup.Item>
-              <ListGroup.Item action eventKey="third">
+              <ListGroup.Item action eventKey="third" variant="success">
                 2018
               </ListGroup.Item>
-              <ListGroup.Item action eventKey="fourth">
+              <ListGroup.Item action eventKey="fourth" variant="success">
                 2017
               </ListGroup.Item>
-              <ListGroup.Item action eventKey="fifth">
+              <ListGroup.Item action eventKey="fifth" variant="success">
                 2016
               </ListGroup.Item>
-              <ListGroup.Item action eventKey="sixth">
+              <ListGroup.Item action eventKey="sixth" variant="success">
                 2015
               </ListGroup.Item>
             </ListGroup>
@@ -42,17 +42,17 @@ const PastTournaments = () => {
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2020-01-01 12:00:00" yearBot="2020-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2019-01-01 12:00:00" yearBot="2019-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <div>
-                  <PastTournamentsDesc/>
+                  <PastTournamentsDesc yearTop="2018-01-01 12:00:00" yearBot="2018-12-31 22:00:00"/>
                 </div>
               </Tab.Pane>
             </Tab.Content>

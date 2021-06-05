@@ -15,7 +15,7 @@ const NormalRanking = () => {
   
   
       return(
-        <Table striped bordered hover>
+        <Table striped bordered hover className="tournamentsTable">
         <thead>
           <tr>
             <th>#</th>

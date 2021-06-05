@@ -7,7 +7,89 @@
   pointer-events: none;
 }
 
+/* COLORS */
 
+.primary1 {
+  background: #BCB6FF;
+}
+
+.secondary {
+  background-color: #B8E1FF;
+}
+
+.ternary {
+  color: #A9FFF7;
+}
+
+.fourthColor {
+  color: #94FBAB;
+}
+
+.fourthColor:hover {
+  color: #2fe657;
+}
+
+.fifthColor {
+  color: #82ABA1;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: hiker;
+  src: url("assets/HikerFont.ttf");
+}
+
+@font-face {
+  font-family: rockwell;
+  src: url("assets/rockwellFont.ttf");
+}
+
+@font-face {
+  font-family: museo;
+  src: url("assets/museoFont.otf");
+}
+
+@font-face {
+  font-family: promesh;
+  src: url("assets/promeshFont.ttf");
+}
+
+.title {
+  font-family: promesh;
+  font-size: 6em;
+}
+
+.subtitle {
+  font-family: rockwell;
+  font-size: 4em;
+}
+
+.buttonFont {
+  font-family: museo;
+}
+
+/* IMAGES */
+
+.background {
+  background-image: url("assets/background.jpg");
+}
+
+.notFocus {
+  background-color: transparent !important ;
+  border: none;
+}
+
+.notFocus:focus {
+  background-color: #94FBAB !important;
+  opacity: 75%;
+  border: 2px solid black;
+}
+
+.notFocus:active {
+  background-color: #94FBAB !important;
+  border: 2px solid black;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -41,9 +123,12 @@
 
 .carousel {
   width: 1000px;
+  height: 100% !important;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-height: 45rem;
+  min-height: 45rem;
 }
 
 .carousel-control-next-icon,
@@ -87,7 +172,7 @@
 }
 
 .main-footer {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -121,8 +206,6 @@
   overflow-y: scroll;
   max-height: 37.5rem;
 }
-
-
 
 .textField{
   height: 32px;
@@ -170,4 +253,19 @@ img {
 .leftLabel {
   margin-left: 15px;
 }
+
+.tournamentList {
+  list-style-type: none;
+}
+
+.imageLogoPast {
+  border: 0.2em solid #000000;
+  background-color: #82ABA1;
+  width:110%;
+}
+
+.tournamentsTable {
+  background-color: #A8DDD0;
+}
+
 

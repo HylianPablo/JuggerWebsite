@@ -40,12 +40,12 @@ class App extends Component {
   }
   
   render() {
-    const pageName = "Jugger Community";
+    const pageName = "Jugger Zone";
     return (
       <Router>
-        <div className="App page-container">
+        <div className="App page-container secondary background">
           <div className="content">
-            <h1>{pageName}</h1>
+            <h1 className="title">{pageName}</h1>
             <NavbarJ />
             {/* EJEMPLO DE UNION A BACKEND*/}
             <p>{this.state.apiResponse}</p>

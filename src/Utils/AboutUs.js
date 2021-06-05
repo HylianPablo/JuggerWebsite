@@ -12,7 +12,7 @@ import rasero from "../assets/perfil_Rasero.jpg";
 const AboutUs = () => {
   return (
     <div>
-      <h1>¡Conoce al equipo!</h1>
+      <h1 className="subtitle">¡Conoce al equipo!</h1>
       <br></br>
       <Row className="justify-content-md-center">
         <Col md={{ span: 2, offset: 0 }}>

@@ -16,13 +16,13 @@ const PastTournamentsInfo = () => {
   return (
     <div>
       <br></br>
-      <h1>{info[0].title}</h1>
+      <h1 className="subtitle">{info[0].title}</h1>
       <p>{info[0].body}</p>
       <br></br>
-      <h2>Resultados del torneo</h2>
+      <h2 className="subtitle">Resultados del torneo</h2>
       <NormalRanking />
       <br></br>
-      <h2>Fotos del torneo</h2>
+      <h2 className="subtitle">Fotos del torneo</h2>
       <CarouselJ />
     </div>
   );
