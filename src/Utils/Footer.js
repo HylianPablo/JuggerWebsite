@@ -5,10 +5,10 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav"
 const Footer = () => {
   return (
-    <div className="main-footer secondary">
+    <div className="main-footer">
     <Card className="text-center" bg={"dark"} text={"light"}>
       <Card.Body>
-        <Card.Title><Nav.Link href="/about" className="">Sobre nosotros</Nav.Link></Card.Title>
+        <Card.Title><Nav.Link href="/about" className="fourthColor">Sobre nosotros</Nav.Link></Card.Title>
         <Card.Text>¡Síguenos en nuestras redes sociales!</Card.Text>
         <Row className="justify-content-md-center">
           <Col md={{ span: 1, offset: 0 }}>

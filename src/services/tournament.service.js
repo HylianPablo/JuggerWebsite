@@ -12,7 +12,7 @@ class TournamentDataservice {
     }
 
     getAllByYear(yearTop, yearBot) {
-        return http.get(`/tournament/?yearTop=${yearTop}&yearBot=${yearBot}`);
+        return http.get(`/tournament/past/?yearTop=${yearTop}&yearBot=${yearBot}`);
     }
 }
 

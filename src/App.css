@@ -25,6 +25,10 @@
   color: #94FBAB;
 }
 
+.fourthColor:hover {
+  color: #2fe657;
+}
+
 .fifthColor {
   color: #82ABA1;
 }
@@ -56,8 +60,35 @@
   font-size: 6em;
 }
 
+.subtitle {
+  font-family: rockwell;
+  font-size: 4em;
+}
+
 .buttonFont {
   font-family: museo;
+}
+
+/* IMAGES */
+
+.background {
+  background-image: url("assets/background.jpg");
+}
+
+.notFocus {
+  background-color: transparent !important ;
+  border: none;
+}
+
+.notFocus:focus {
+  background-color: #94FBAB !important;
+  opacity: 75%;
+  border: 2px solid black;
+}
+
+.notFocus:active {
+  background-color: #94FBAB !important;
+  border: 2px solid black;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -92,9 +123,12 @@
 
 .carousel {
   width: 1000px;
+  height: 100% !important;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-height: 45rem;
+  min-height: 45rem;
 }
 
 .carousel-control-next-icon,
@@ -138,7 +172,7 @@
 }
 
 .main-footer {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -172,8 +206,6 @@
   overflow-y: scroll;
   max-height: 37.5rem;
 }
-
-
 
 .textField{
   height: 32px;
@@ -231,3 +263,9 @@ img {
   background-color: #82ABA1;
   width:110%;
 }
+
+.tournamentsTable {
+  background-color: #A8DDD0;
+}
+
+

@@ -79,7 +79,7 @@ export default class ActiveTournamentDesc extends Component {
                     key={index}
                   >
                     <Nav.Item>
-                      <Nav.Link eventKey={tournament.id}>
+                      <Nav.Link eventKey={tournament.id} className="notFocus">
                       <img src={tournament.image} className="logoT"></img>
                       </Nav.Link>
                     </Nav.Item>
@@ -90,9 +90,9 @@ export default class ActiveTournamentDesc extends Component {
               <Tab.Content>
                 {currentTournament ? (
                   <div>
-                    <h4>{currentTournament.name}</h4>
+                    <h1 className="subtitle">{currentTournament.name}</h1>
                     <div>
-                      <Table striped bordered hover>
+                      <Table className="tournamentsTable" striped bordered hover >
                         <tbody>
                           <tr>
                             <th>Ubicación</th>
@@ -110,9 +110,10 @@ export default class ActiveTournamentDesc extends Component {
                       </Table>
                       <br></br>
                       <Button
-                        variant="primary"
+                        variant="success"
                         size="lg"
                         block
+                        className="primary1"
                         href="/torneos/inscripcion"
                       >
                         Inscríbe a tu equipo

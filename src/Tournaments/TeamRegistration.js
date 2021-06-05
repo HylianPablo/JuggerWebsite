@@ -28,7 +28,7 @@ const TeamRegistration = () => {
         />
       </Form.Group>
       <br></br>
-          <Button type="submit" variant="primary" size="lg" block>
+          <Button type="submit" variant="success" size="lg" block>
             Inscríbe a tu equipo
           </Button>
     </Form>
