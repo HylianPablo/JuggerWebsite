@@ -55,6 +55,11 @@
   src: url("assets/promeshFont.ttf");
 }
 
+@font-face {
+  font-family: kghappy;
+  src: url("assets/KGHAPPYFont.ttf")
+}
+
 .title {
   font-family: promesh;
   font-size: 6em;
@@ -66,7 +71,7 @@
 }
 
 .buttonFont {
-  font-family: museo;
+  font-family: kghappy;
 }
 
 /* IMAGES */
@@ -266,6 +271,37 @@ img {
 
 .tournamentsTable {
   background-color: #A8DDD0;
+}
+
+.userFormTable {
+  background-color: #A8DDD0;
+  border-radius: 25px;
+}
+
+.confident {
+  color: #000000;
+}
+
+.successColor {
+  background-color: #5cb85c !important;
+}
+
+.membersColor {
+  background-color: #8ccf8c !important;
+}
+
+.cardTextSize {
+  font-size: 2em;
+}
+
+.addNewMembers {
+  width: 55em;
+  height: 8em;
+  padding-left: 2em;
+}
+
+.successBorder {
+  border-color: #5cb85c !important;
 }
 
 

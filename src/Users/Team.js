@@ -17,7 +17,8 @@ const Team = () => {
       <br></br>
       <Form.Group controlId="formName">
         <Row className="profileModForm">
-          <Col className="leftRegistration">
+          <Col className="leftRegistration userFormTable">
+            <br></br>
             <Row>
               <Col>
                 <Form.Control type="text" placeholder="Nombre del equipo" />
@@ -49,12 +50,12 @@ const Team = () => {
             </Form.Group>
             <TeamMembers/>
             <Form.Group>
-              <Row>
+              <Row className="addNewMembers">
                 <InputGroup>
                   <InputGroup.Prepend>
                     <InputGroup.Text>Añadir nuevo/s miembros</InputGroup.Text>
                   </InputGroup.Prepend>
-                  <FormControl as="textarea" aria-label="" />
+                  <FormControl as="textarea" aria-label=""/>
                 </InputGroup>
               </Row>
             </Form.Group>
@@ -72,13 +73,15 @@ const Team = () => {
         </Row>
       </Form.Group>
 
-      <Form.Text className="text-muted">
+      <Form.Text className="">
         Todos sus datos serán encriptados y tratados con confidencialidad.
       </Form.Text>
       <br></br>
-      <Button variant="primary" type="submit">
+      <Button variant="success" type="submit">
         Modificar datos del equipo
       </Button>
+      <br></br>
+      <br></br>
     </Form>
   );
 };
