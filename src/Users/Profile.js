@@ -19,7 +19,8 @@ const Profile = () => {
       <br></br>
       <Form.Group controlId="formName">
         <Row className="profileModForm">
-          <Col className="leftRegistration">
+          <Col className="leftRegistration userFormTable">
+            <br></br>
             <Row>
               <Col>
                 <Form.Control type="text" placeholder="Nombre" />
@@ -119,13 +120,15 @@ const Profile = () => {
         </Row>
       </Form.Group>
 
-      <Form.Text className="text-muted">
+      <Form.Text className="">
         Todos sus datos serán encriptados y tratados con confidencialidad.
       </Form.Text>
       <br></br>
-      <Button variant="primary" type="submit">
+      <Button variant="success" type="submit">
         Modificar mis datos
       </Button>
+      <br></br>
+      <br></br>
     </Form>
   );
 };
