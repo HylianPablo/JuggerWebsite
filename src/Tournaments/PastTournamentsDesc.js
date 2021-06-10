@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Component } from "react";
 
 import Row from "react-bootstrap/Row";
@@ -125,7 +124,7 @@ export default class PastTournamentsDesc extends Component {
                   >
                     <Nav.Item>
                       <Nav.Link eventKey={tournament.id} href="torneosAnteriores/descripcion">
-                      <img src={tournament.image} className="logoT imageLogoPast"></img>
+                      <img src={tournament.image} className="logoT imageLogoPast" alt="Logo del evento"></img>
                       </Nav.Link>
                     </Nav.Item>
                   </Nav>

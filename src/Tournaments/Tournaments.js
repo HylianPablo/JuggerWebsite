@@ -80,7 +80,7 @@ export default class ActiveTournamentDesc extends Component {
                   >
                     <Nav.Item>
                       <Nav.Link eventKey={tournament.id} className="notFocus">
-                      <img src={tournament.image} className="logoT"></img>
+                      <img src={tournament.image} className="logoT" alt="Logo del evento"></img>
                       </Nav.Link>
                     </Nav.Item>
                   </Nav>

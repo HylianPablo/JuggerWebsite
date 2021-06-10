@@ -21,6 +21,7 @@ import TeamRegistration from "./Tournaments/TeamRegistration.js";
 import PastTournaments from "./Tournaments/PastTournaments.js";
 import PastTournamentsInfo from "./Tournaments/PastTournamentInfo.js";
 import Team from "./Users/Team.js";
+import Bizum from "./Shop/Bizum.js";
 
 import TutorialsList from "./exampleBackend/tutorials-list.component";
 import AddTutorial from "./exampleBackend/add-tutorial.component";
@@ -34,11 +35,7 @@ class App extends Component {
     super(props);
     this.state = { apiResponse: "" };
   }
-
-
-  componentDidMount() {
-  }
-  
+ 
   render() {
     const pageName = "Jugger Zone";
     return (
