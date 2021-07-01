@@ -1,0 +1,307 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* COLORS */
+
+.primary1 {
+  background: #BCB6FF;
+}
+
+.secondary {
+  background-color: #B8E1FF;
+}
+
+.ternary {
+  color: #A9FFF7;
+}
+
+.fourthColor {
+  color: #94FBAB;
+}
+
+.fourthColor:hover {
+  color: #2fe657;
+}
+
+.fifthColor {
+  color: #82ABA1;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: hiker;
+  src: url("assets/HikerFont.ttf");
+}
+
+@font-face {
+  font-family: rockwell;
+  src: url("assets/rockwellFont.ttf");
+}
+
+@font-face {
+  font-family: museo;
+  src: url("assets/museoFont.otf");
+}
+
+@font-face {
+  font-family: promesh;
+  src: url("assets/promeshFont.ttf");
+}
+
+@font-face {
+  font-family: kghappy;
+  src: url("assets/KGHAPPYFont.ttf")
+}
+
+.title {
+  font-family: promesh;
+  font-size: 6em;
+}
+
+.subtitle {
+  font-family: rockwell;
+  font-size: 4em;
+}
+
+.buttonFont {
+  font-family: kghappy;
+}
+
+/* IMAGES */
+
+.background {
+  background-image: url("assets/background.jpg");
+}
+
+.notFocus {
+  background-color: transparent !important ;
+  border: none;
+}
+
+.notFocus:focus {
+  background-color: #94FBAB !important;
+  opacity: 75%;
+  border: 2px solid black;
+}
+
+.notFocus:active {
+  background-color: #94FBAB !important;
+  border: 2px solid black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel {
+  width: 1000px;
+  height: 100% !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 45rem;
+  min-height: 45rem;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+/* This is not responsive, should be changed later */
+.registrationForm {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.profileModForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridPastTournaments {
+  position: relative;
+  left: 100px;
+}
+
+.leftRegistration {
+  position: absolute;
+  left: 50px;
+  padding: 0px;
+}
+
+.footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  height: 2.5rem; 
+}
+
+.page-container {
+  position: relative;
+  min-height: 80vh;
+}
+
+.main-footer {
+  padding-top: 2.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-txt-top {
+  width: 100%;
+  height: 4vw;
+  object-fit: cover;
+}
+
+.youtubeVideo {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.logoT {
+  width: 70%;
+}
+
+.logoList {
+  overflow-y: scroll;
+  max-height: 37.5rem;
+}
+
+.textField{
+  height: 32px;
+  width: 200px;
+  padding: 0 32px 0 16px;
+  
+  }
+.textField:hover {
+  cursor: pointer;
+}
+  
+.btnBuscar{
+  height: 34px;
+  width: 32px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+  
+.barraBusqueda{
+  float: right;
+  padding: 20px;
+}
+
+.columna {
+  float: left;
+  width: 25%;
+  padding-right: 5px;
+}
+    
+.fila::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+img {
+      /* Para que sea responsiva */
+  width: 100%;
+}
+
+.logoGrid {
+  margin-bottom: 5rem;
+}
+
+.leftLabel {
+  margin-left: 15px;
+}
+
+.tournamentList {
+  list-style-type: none;
+}
+
+.imageLogoPast {
+  border: 0.2em solid #000000;
+  background-color: #82ABA1;
+  width:110%;
+}
+
+.tournamentsTable {
+  background-color: #A8DDD0;
+}
+
+.userFormTable {
+  background-color: #A8DDD0;
+  border-radius: 25px;
+}
+
+.confident {
+  color: #000000;
+}
+
+.successColor {
+  background-color: #5cb85c !important;
+}
+
+.membersColor {
+  background-color: #8ccf8c !important;
+}
+
+.cardTextSize {
+  font-size: 2em;
+}
+
+.addNewMembers {
+  width: 55em;
+  height: 8em;
+  padding-left: 2em;
+}
+
+.successBorder {
+  border-color: #5cb85c !important;
+}
+
+
